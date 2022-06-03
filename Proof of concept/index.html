@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Neo, initial-scale=1.0">
+    <title>Proof of Concept</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href='assets/css/style.css' rel='stylesheet'>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+
+    <style>
+
+        #map {
+            position: center;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="page__header header">
+        <div class="header__container container">
+            <div class="header__body">
+                <div class="header__leftside">
+                    <a href="#" title="" class="header__logo">MICHAEL</a>
+                </div>
+                <div class="header__rightside">
+                    <div class="header__menu header-menu">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__item">
+                                <a href="#" title="" class="header-menu__link">Home</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#about_section" title="" class="header-menu__link">About</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#skills_section" title="" class="header-menu__link">Skills</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#portfolio_section" title="" class="header-menu__link">Portfolio</a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a href="#contact_section" title="" class="header-menu__link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__changer">
+                        <div class="header__moon">
+                            <i class='bx bx-moon'></i>
+                        </div>
+                    </div>
+                    <div class="header__mob">
+                        <div class="header__mob-menu">
+                            <i class='bx bx-menu'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page__intro intro">
+        <div class="intro__container container">
+            <div class="intro__body">
+                <div class="intro__content">
+                    <h1 class="intro__title">Hi, I'm <span>Michael</span></h1>
+                    <span class="intro__position">BSU Student</span>
+                    <p class="intro__text">Year 3 student of Creative Computing at Bath Spa University in The United Arab Emirates.</p>
+                    <div class="intro__btn">
+                        <a href="#" title="" class="btn">Contact Me <i class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                    <div class="intro__socials intro-soc">
+                        <div class="intro-soc__item">
+                            <a href="https://twitter.com/" title="" class="intro-soc__link"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                        <div class="intro-soc__item">
+                            <a href="https://dribbble.com/" title="" class="intro-soc__link"><i class='bx bxl-dribbble'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__img">
+                    <img style="border-radius: 45%;" src="assets/img/intro-img.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about_section">
+        <div class="page__intro intro">
+            <div class="intro__container container">
+                <div class="intro__body">
+                    <div class="intro__content">
+                        <h1 class="intro__title">About <span>Me</span></h1>
+                        <p class="intro__text">Year 3 student of Creative Computing at Bath Spa University in The United Arab Emirates. Born and raised as a gamer. I play any game that peeks my interests from First-Person shooters to Role-Playing games, which molded me to be a team player with strong oral and written communication skills and an analytical and problem solving aptitude.</p>
+                        <div class="intro__socials intro-soc">
+                            <div class="intro-soc__item">
+                                <a href="https://twitter.com/" title="" class="intro-soc__link"><i class='bx bxl-twitter'></i></a>
+                            </div>
+                            <div class="intro-soc__item">
+                                <a href="https://dribbble.com/" title="" class="intro-soc__link"><i class='bx bxl-dribbble'></i></a>
+                            </div>
+                            <div class="intro-soc__item">
+                            </div>
+                        </div>
+                        <div class="weatherWidget"></div>
+                        <div id="map"></div>
+                        <script>
+                            mapboxgl.accessToken = 'pk.eyJ1IjoibWNtcjEyMDE5OCIsImEiOiJjbDN5NHpjaHMxcTk4M2ZueTNzbTgxbm8xIn0.8sqhesO2TqAnyRCsHyUevw';
+                            const map = new mapboxgl.Map({
+                                container: 'map', // container ID
+                                style: 'mapbox://styles/mapbox/streets-v11', // style URL
+                                center: [55.27, 25.2], // starting position [lng, lat]
+                                zoom: 10 // starting zoom
+                            });
+                        </script>
+
+                    </div>
+                    <div class="intro__img">
+                        <img style="border-radius: 100%;" src="assets/img/gaming-mouse.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="skills_section">
+        <div class="page__intro intro">
+            <div class="intro__container container">
+                <div class="intro__body">
+                    <div class="intro__content">
+                        <h1 class="intro__title">My <span>Skills</span></h1>
+                        <div class="intro__socials intro-soc">
+
+                        </div>
+
+                        <div class="skillbox">
+                            <div class="rowone">
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Adaptability</p> <br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Collaboration</p> <br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Critical thinking</p><br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rowtwo">
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">People skills</p><br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Dedication</p><br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Computer profeciency</p><br />
+                                    <div class="stars">
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                        <img src="assets/img/star.png" width="25" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio_section">
+        <div class="page__intro intro">
+            <div class="intro__container container">
+                <div class="intro__body">
+                    <div class="intro__content">
+                        <h1 class="intro__title">My <span>Portfolio</span></h1>
+
+
+                        <div class="vidbox">
+                            <div class="rowone">
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">My story</p> <br />
+                                    <div style="margin-left: 100px;">
+                                        <video id="video" controls="controls" width="400">
+                                            <source src="assets/vid/My%20Story%20Project.mp4" type="video/mp4" />
+                                        </video>
+                                        <button style="margin-left: 150px;" id="pipButton">Picture-in-Picutre</button>
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Gamify app prototype</p> <br />
+                                    <div style="margin-left: 100px;">
+                                        <video id="videotwo" controls="controls" width="400">
+                                            <source src="assets/vid/Prototype%202.mp4" type="video/mp4" />
+                                        </video>
+                                        <button style="margin-left: 150px;" id="pipButtontwo">Picture-in-Picutre</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="rowtwo">
+
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Research presentation</p><br />
+                                    <div style="margin-left: 100px;">
+                                        <video id="videothree" controls="controls" width="400">
+                                            <source src="assets/vid/Research%20viva%20%20%20Michael.mp4" type="video/mp4" />
+                                        </video>
+                                        <button style="margin-left: 150px;" id="pipButtonthree">Picture-in-Picutre</button>
+                                    </div>
+                                </div>
+
+                                <div class="one">
+                                    <p class="intro__text" style="font-size: 40px; text-align: center; margin-top: 20px; margin-bottom: 0px">Timelapse project</p><br />
+                                    <div style="margin-left: 100px;">
+                                        <video id="videofour" controls="controls" width="400">
+                                            <source src="assets/vid/Timelapse%20Project.mp4" type="video/mp4" />
+                                        </video>
+                                        <button style="margin-left: 150px;" id="pipButtonfour">Picture-in-Picutre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contact_section">
+        <div class="page__intro intro">
+            <div class="intro__container container">
+                <div class="intro__body">
+                    <div class="intro__content">
+                        <h1 class="intro__title">Contact <span>Me</span></h1>
+                        <p class="intro__text">You can contact me on my Socials.</p>
+                        <div class="intro__socials intro-soc">
+                            <div class="contact-soc__item">
+                                <a href="https://twitter.com/" title="" class="intro-soc__link"><i class='bx bxl-twitter'></i></a>
+                            </div>
+                            <div class="contact-soc__item">
+                                <a href="https://dribbble.com/" title="" class="intro-soc__link"><i class='bx bxl-dribbble'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__img">
+                        <img style="border-radius: 45%;" src="assets/img/intro-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/pip_api.js"></script>
+    <script src="assets/js/weather_api.js"></script>
+
+</body>
+</html>
